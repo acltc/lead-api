@@ -16,6 +16,6 @@ class Lead < ApplicationRecord
   end
 
   def send_first_email
-    LeadContactMailer.first_message(self).deliver
+    LeadMailer.first_message(self).deliver
   end
 end
