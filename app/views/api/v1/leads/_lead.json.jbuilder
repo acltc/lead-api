@@ -1,0 +1,12 @@
+json.id lead.id
+json.first_name lead.first_name
+json.last_name lead.last_name
+json.email lead.email
+json.phone lead.phone
+json.city lead.city
+json.state lead.state
+json.zip lead.zip
+json.country lead.country
+json.mousetrap lead.mousetrap
+json.ip_address lead.ip_address
+json.active lead.active
