@@ -1,3 +1,15 @@
+@import "materialize/components/color";
+$primary-color-dark:   color("indigo", "darken-2") !default;
+$primary-color:        color("indigo", "base") !default;
+$primary-color-light:  color("indigo", "lighten-4") !default;
+$primary-color-text:   color("white", "base") !default;
+$accent-color:         color("amber", "base") !default;
+$primary-text-color:   color("grey", "darken-4") !default;
+$secondary-text-color: color("grey", "darken-1") !default;
+$divider-color:        color("grey", "lighten-1") !default;
+@import "materialize";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -13,3 +25,7 @@
  *= require_tree .
  *= require_self
  */
+
+.secondary-content {
+  font-weight: bold;
+}

@@ -9,8 +9,32 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <nav>
+      <div class="container nav-wrapper">
+        <% if current_admin %>
+          <%= link_to "Lead Contact Settings", authenticated_root_path, class: "brand-logo" %>
+        <% else %>
+          <%= link_to "Lead Contact Settings", unauthenticated_root_path, class: "brand-logo" %>
+        <% end %>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <% if current_admin %>
+            <li><%= link_to "Sign Out", destroy_admin_session_path, method: :delete %></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+    <% if notice %>
+      <script type="text/javascript">
+        Materialize.toast('<%= notice %>', 4000, 'notice amber black-text')
+      </script>
+    <% end %>
+    <% if alert %>
+      <script type="text/javascript">
+        Materialize.toast('<%= alert %>', 4000, 'alert red')
+      </script>
+    <% end %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

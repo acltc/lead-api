@@ -13,6 +13,8 @@ class Lead < ApplicationRecord
                                         :to => text_to_number,
                                         :body => "Hello from Actualize! Are you available to chat?"
                                       })
+
+    return message.sid
   end
 
   def send_first_email
