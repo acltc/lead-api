@@ -1,5 +1,5 @@
 class LeadMailer < ApplicationMailer
-  default from: 'nikki@actualize.co'
+  default from: Setting.first.email
 
   def first_message(lead)
     @lead = lead

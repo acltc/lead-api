@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   devise_for :admins, skip: [:registrations]
 
+  post '/twilio-webhook' => 'webhooks#twilio'
+  post '/sendgrid-webhook' => 'webhooks#sendgrid'
+
   devise_scope :admin do
     authenticated :admin do
       root 'settings#show', as: :authenticated_root
@@ -18,4 +21,5 @@ Rails.application.routes.draw do
   end
 
   resources :settings
+
 end

@@ -17,7 +17,7 @@ class Api::V1::LeadsController < ApplicationController
     @lead = Lead.new(lead_params)
 
     if @lead.save
-      render json: @lead, status: :created, location: @lead
+      render json: @lead, status: :created
     else
       render json: @lead.errors, status: :unprocessable_entity
     end
