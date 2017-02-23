@@ -9,16 +9,16 @@
   </head>
 
   <body>
-    <nav>
+    <nav class="amber-text">
       <div class="container nav-wrapper">
         <% if current_admin %>
           <%= link_to "Lead Contact Settings", authenticated_root_path, class: "brand-logo" %>
         <% else %>
           <%= link_to "Lead Contact Settings", unauthenticated_root_path, class: "brand-logo" %>
         <% end %>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <ul class="right">
           <% if current_admin %>
-            <li><%= link_to "Sign Out", destroy_admin_session_path, method: :delete %></li>
+            <li><%= link_to "Sign Out", destroy_admin_session_path, method: :delete, class: "amber-text" %></li>
           <% end %>
         </ul>
       </div>

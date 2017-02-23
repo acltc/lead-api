@@ -1,0 +1,19 @@
+<div class="row">
+  <%= form_tag "/settings/#{@settings.id}", method: :patch, class: "col s12 m8 offset-m2" do %>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= email_field :settings, :email, value: "#{@settings.email}", class: "validate" %>
+        <label for="email" data-error="Incorrect Format" data-success="" class="active">Default E-mail Address</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= telephone_field :settings, :phone, value: "#{@settings.phone}", class: "validate" %>
+        <label for="phone" data-error="Incorrect Format" data-success="" class="active">Forwarding Text Number</label>
+      </div>
+    </div>
+    <div class="row right-align">
+      <button class="btn waves-effect waves-light amber" type="submit">Submit</button>
+    </div>
+  <% end %>
+</div>
