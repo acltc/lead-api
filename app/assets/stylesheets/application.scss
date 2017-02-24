@@ -27,26 +27,29 @@ $divider-color:        color("grey", "lighten-1") !default;
  *= require_self
  */
 
-.secondary-content {
-  font-weight: bold;
-}
 
-.settings-show {
+
+/**************** SETTINGS SHOW ****************/
+#settings-show {
   margin-top: 80px;
 }
-
-.settings-edit {
-  margin-top: 10px;
-}
-
-.settings-edit-form {
-  margin-top: 60px;
+.secondary-content {
+  font-weight: bold;
 }
 
 .card-heading {
   color: $primary-text-color;
 }
 
-.notice {
-  background: grey;
+.switch {
+  padding-top: 7px;
+}
+
+/**************** SETTINGS EDIT ****************/
+.settings-edit {
+  margin-top: 10px;
+}
+
+.settings-edit-form {
+  margin-top: 60px;
 }
