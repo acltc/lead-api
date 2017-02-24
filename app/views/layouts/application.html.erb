@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LeadApi</title>
+    <title>Actualize Lead Contact</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -12,9 +12,9 @@
     <nav class="amber-text">
       <div class="container nav-wrapper">
         <% if current_admin %>
-          <%= link_to "Lead Contact Settings", authenticated_root_path, class: "brand-logo" %>
+          <%= link_to "Lead Contact Settings", authenticated_root_path, class: "left brand-logo" %>
         <% else %>
-          <%= link_to "Lead Contact Settings", unauthenticated_root_path, class: "brand-logo" %>
+          <%= link_to "Lead Contact Settings", unauthenticated_root_path, class: "left brand-logo" %>
         <% end %>
         <ul class="right">
           <% if current_admin %>

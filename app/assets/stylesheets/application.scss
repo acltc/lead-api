@@ -45,6 +45,14 @@ $divider-color:        color("grey", "lighten-1") !default;
   padding-top: 7px;
 }
 
+.switch label input[type=checkbox]:checked+.lever {
+  background-color: #5c6bc0;
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+  background-color: $primary-color-dark;
+}
+
 /**************** SETTINGS EDIT ****************/
 .settings-edit {
   margin-top: 10px;
@@ -52,4 +60,22 @@ $divider-color:        color("grey", "lighten-1") !default;
 
 .settings-edit-form {
   margin-top: 60px;
+}
+
+/**************** MEDIA QUERIES ****************/
+@media #{$small-and-down} {
+}
+@media #{$medium-and-up} {
+}
+@media #{$medium-and-down} {
+  label, p, div, .lever {
+    font-size: 2rem !important;
+  }
+
+  input {
+    font-size: 2.5rem !important;
+    margin-bottom: 25px !important;
+  }
+}
+@media #{$large-and-up} {
 }
