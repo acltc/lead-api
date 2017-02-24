@@ -68,14 +68,26 @@ $divider-color:        color("grey", "lighten-1") !default;
 @media #{$medium-and-up} {
 }
 @media #{$medium-and-down} {
-  label, p, div, .lever {
+  label, p, div, a, .material-icons, .card-title {
     font-size: 2rem !important;
   }
 
   input {
     font-size: 2.5rem !important;
-    margin-bottom: 25px !important;
+    margin-bottom: 35px !important;
+  }
+
+  li.collection-item {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
 }
 @media #{$large-and-up} {
+}
+
+@media only screen and (max-width : 992px) {
+  nav .brand-logo.left {
+    left: 0.5rem;
+    padding: 0;
+  }
 }

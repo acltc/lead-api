@@ -12,9 +12,9 @@
     <nav class="amber-text">
       <div class="container nav-wrapper">
         <% if current_admin %>
-          <%= link_to "Lead Contact Settings", authenticated_root_path, class: "left brand-logo" %>
+          <%= link_to "Lead Contact Settings", authenticated_root_path, class: "brand-logo" %>
         <% else %>
-          <%= link_to "Lead Contact Settings", unauthenticated_root_path, class: "left brand-logo" %>
+          <%= link_to "Lead Contact Settings", unauthenticated_root_path, class: "brand-logo" %>
         <% end %>
         <ul class="right">
           <% if current_admin %>
