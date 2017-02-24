@@ -1,5 +1,11 @@
-<div class="row">
-  <%= form_tag "/settings/#{@settings.id}", method: :patch, class: "col s12 m8 offset-m2" do %>
+<div class="settings-edit">
+  <div class="row">
+    <a href="/settings/<%= @settings.id %>" class="amber-text"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Settings</a>
+  </div>
+</div>
+<div class="settings-edit-form">
+  <div class="row">
+    <%= form_tag "/settings/#{@settings.id}", method: :patch, class: "col s12 m8 offset-m2" do %>
     <div class="row">
       <div class="input-field col s12">
         <%= email_field :settings, :email, value: "#{@settings.email}", class: "validate" %>
@@ -15,5 +21,6 @@
     <div class="row right-align">
       <button class="btn waves-effect waves-light amber" type="submit">Submit</button>
     </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>

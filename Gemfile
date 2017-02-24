@@ -41,6 +41,7 @@ gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 # Use Twilio to send text messages
 gem 'twilio-ruby', '~> 4.11', '>= 4.11.1'
 gem 'rack-cors', '~> 0.4.1'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

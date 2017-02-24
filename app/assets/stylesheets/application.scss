@@ -9,6 +9,7 @@ $secondary-text-color: color("grey", "darken-1") !default;
 $divider-color:        color("grey", "lighten-1") !default;
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "font-awesome";
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -28,4 +29,24 @@ $divider-color:        color("grey", "lighten-1") !default;
 
 .secondary-content {
   font-weight: bold;
+}
+
+.settings-show {
+  margin-top: 80px;
+}
+
+.settings-edit {
+  margin-top: 10px;
+}
+
+.settings-edit-form {
+  margin-top: 60px;
+}
+
+.card-heading {
+  color: $primary-text-color;
+}
+
+.notice {
+  background: grey;
 }

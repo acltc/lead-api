@@ -1,18 +1,20 @@
-<div class="row">
-  <div class="col s12 m8 offset-m2">
-    <div class="card grey darken-1">
-      <div class="card-content white-text">
-        <div class="valign-wrapper">
-          <i class="amber-text material-icons valign" style="padding-right: 5px;">settings</i> <span class="card-title valign">SETTINGS</span>
+<div class="settings-show">
+  <div class="row">
+    <div class="col s12 m8 offset-m2">
+      <div class="card grey darken-1">
+        <div class="card-content white-text">
+          <div class="valign-wrapper">
+            <i class="amber-text material-icons valign" style="padding-right: 5px;">settings</i> <span class="card-title valign">SETTINGS</span>
+          </div>
+          <ul class="collection">
+            <li class="collection-item"><div class="black-text darken-4">Default E-Mail<p class="secondary-content indigo-text darken-2"><%= @settings.email %></p></div></li>
+            <li class="collection-item"><div class="black-text darken-4">Forwarding Text Number<p class="secondary-content indigo-text darken-2"><%= @settings.phone %></p></div></li>
+            <li class="collection-item"><div class="black-text darken-4">Text Forwarding On<p class="secondary-content indigo-text darken-2"><%= human_boolean(@settings.active) %></p></div></li>
+          </ul>
         </div>
-        <ul class="collection">
-          <li class="collection-item"><div class="black-text darken-4">Default E-Mail<p class="secondary-content indigo-text darken-2"><%= @settings.email %></p></div></li>
-          <li class="collection-item"><div class="black-text darken-4">Forwarding Text Number<p class="secondary-content indigo-text darken-2"><%= @settings.phone %></p></div></li>
-          <li class="collection-item"><div class="black-text darken-4">Text Forwarding On<p class="secondary-content indigo-text darken-2"><%= human_boolean(@settings.active) %></p></div></li>
-        </ul>
-      </div>
-      <div class="card-action right-align">
-        <a href="/settings/1/edit" class="amber-text">EDIT</a>
+        <div class="card-action right-align">
+          <a href="/settings/1/edit" class="amber-text">EDIT</a>
+        </div>
       </div>
     </div>
   </div>
