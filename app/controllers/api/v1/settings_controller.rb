@@ -11,9 +11,15 @@ class Api::V1::SettingsController < ApplicationController
     render json: @setting
   end
 
-  def update
+  def update_text_active
     @setting = Setting.find(params[:id])
-    @setting.update(active: params[:settings][:active])
+    @setting.update(text_active: params[:settings][:text_active])
+    redirect_to authenticated_root_path
+  end
+
+  def update_email_active
+    @setting = Setting.find(params[:id])
+    @setting.update(email_active: params[:settings][:email_active])
     redirect_to authenticated_root_path
   end
 end

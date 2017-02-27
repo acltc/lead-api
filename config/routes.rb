@@ -17,10 +17,12 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :leads
-      resources :settings
+      get '/settings' => 'settings#index'
+      get '/settings/:id' => 'settings#show'
+      put '/settings/update_text/:id' => 'settings#update_text_active'
+      put '/settings/update_email/:id' => 'settings#update_email_active'
     end
   end
 
   resources :settings
-
 end

@@ -3,6 +3,6 @@ class LeadMailer < ApplicationMailer
 
   def first_message(lead)
     @lead = lead
-    mail(to: @lead.email, subject: '[TEST] Lead Initial Contact Email')
+    mail(to: @lead.email, subject: 'Hello from Actualize!')
   end
 end

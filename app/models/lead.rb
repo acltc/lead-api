@@ -9,7 +9,7 @@ class Lead < ApplicationRecord
 
     @client = Twilio::REST::Client.new account_sid, auth_token
 
-    if Setting.first.active
+    if Setting.first.text_active
       message = @client.messages.create({ :from => twilio_number,
                                           :to => text_to_number,
                                           :body => "Hello from Actualize! Are you available to chat?"
@@ -18,6 +18,8 @@ class Lead < ApplicationRecord
   end
 
   def send_first_email
-    LeadMailer.first_message(self).deliver
+    if Setting.first.email_active
+      LeadMailer.first_message(self).deliver
+    end
   end
 end

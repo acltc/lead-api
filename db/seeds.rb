@@ -9,5 +9,6 @@
 Setting.create(
   phone: "+17084201312",
   email: "nikki@actualize.co",
-  active: true
+  text_active: true,
+  email_active: true
 )

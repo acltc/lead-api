@@ -11,7 +11,10 @@
             <li class="collection-item"><div class="black-text darken-4">Forwarding Text Number<p class="secondary-content indigo-text darken-2">{{ settings.phone }}</p></div></li>
           </ul>
           <ul class="collection">
-            <li class="collection-item center-align"><div class="black-text darken-4">Text Forwarding<div class="switch"><label>Off<input id="textSwitch" v-model="settings.active" @click="toggleTextForwarding()" type="checkbox"><span class="lever"></span>On</label></div></li>
+            <li class="collection-item center-align"><div class="black-text darken-4">SEND TEXT<div class="switch"><label>Off<input id="textSwitch" v-model="settings.text_active" @click="toggleTextForwarding()" type="checkbox"><span class="lever"></span>On</label></div></li>
+          </ul>
+          <ul class="collection">
+            <li class="collection-item center-align"><div class="black-text darken-4">SEND EMAIL<div class="switch"><label>Off<input id="emailSwitch" v-model="settings.email_active" @click="toggleEmailForwarding()" type="checkbox"><span class="lever"></span>On</label></div></li>
           </ul>
         </div>
         <div class="card-action right-align">
