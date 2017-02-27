@@ -3,6 +3,20 @@
     <a href="/settings/<%= @settings.id %>" class="amber-text"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Settings</a>
   </div>
 </div>
+<div class="row">
+  <% if @settings.errors.any? %>
+    <div class="alert alert-dismissible alert-warning center-warning form-errors">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <%= pluralize(@settings.errors.count, "error") %> prohibited
+        the part from being uploaded:
+      <ul>
+        <% @settings.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
 <div class="settings-edit-form">
   <div class="row">
     <%= form_tag "/settings/#{@settings.id}", method: :patch, class: "col s12 m12 l8 offset-l2" do %>
@@ -15,7 +29,7 @@
     <div class="row">
       <div class="input-field col s12">
         <%= telephone_field :settings, :phone, value: "#{@settings.phone}", class: "validate" %>
-        <label for="phone" data-error="Incorrect Format" data-success="" class="active">Forwarding Text Number</label>
+        <label for="phone" data-error="Incorrect Format" data-success="" class="active">Forwarding Text Number <a class="btn tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am tooltip"><i class="fa fa-question-circle" aria-hidden="true"></i></a></label>
       </div>
     </div>
     <div class="row right-align">
@@ -24,3 +38,9 @@
     <% end %>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.tooltipped').tooltip({delay: 50});
+  });
+</script>
