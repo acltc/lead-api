@@ -1,5 +1,5 @@
 class Lead < ApplicationRecord
-  after_create :send_text, :send_first_email
+  # after_create :send_text, :send_first_email
 
   def send_text
     account_sid = ENV['TWILIO_ACCOUNT_SID']
@@ -14,8 +14,6 @@ class Lead < ApplicationRecord
                                           :to => text_to_number,
                                           :body => "Hello from Actualize! Are you available to chat?"
                                         })
-
-      return message.sid
     end
   end
 
