@@ -14,9 +14,6 @@ class Api::V1::LeadsController < ApplicationController
 
   # POST /leads
   def create
-    p "------------------------------"
-    p lead_params
-    p "------------------------------"
     @lead = Lead.new(lead_params)
 
     if @lead.save
