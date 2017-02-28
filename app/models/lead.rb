@@ -10,7 +10,7 @@ class Lead < ApplicationRecord
     @client = Twilio::REST::Client.new account_sid, auth_token
 
     if Setting.first.text_active
-      sleep 120
+      sleep 210
       message = @client.messages.create({ :from => twilio_number,
                                           :to => text_to_number,
                                           :body => "Hello from Actualize! Are you available to chat?"

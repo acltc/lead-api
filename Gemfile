@@ -42,6 +42,7 @@ gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 gem 'twilio-ruby', '~> 4.11', '>= 4.11.1'
 gem 'rack-cors', '~> 0.4.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
+gem 'phony_rails', '~> 0.14.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

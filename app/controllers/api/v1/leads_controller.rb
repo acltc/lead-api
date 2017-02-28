@@ -15,8 +15,6 @@ class Api::V1::LeadsController < ApplicationController
   # POST /leads
   def create
     @lead = Lead.new(lead_params)
-    p '______________________'
-    p lead_params
 
     if @lead.save
       render json: @lead, status: :created
