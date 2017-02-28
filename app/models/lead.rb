@@ -20,6 +20,7 @@ class Lead < ApplicationRecord
 
   def send_first_email
     if Setting.first.email_active
+      sleep 60
       LeadMailer.first_message(self).deliver
     end
   end
