@@ -3,12 +3,9 @@
     <a href="/settings/<%= @settings.id %>" class="amber-text"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Settings</a>
   </div>
 </div>
-<div class="row">
+<div class="row center-align">
   <% if @settings.errors.any? %>
-    <div class="alert alert-dismissible alert-warning center-warning form-errors">
-      <button type="button" class="close" data-dismiss="alert">×</button>
-      <%= pluralize(@settings.errors.count, "error") %> prohibited
-        the part from being uploaded:
+    <div class="alert">
       <ul>
         <% @settings.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
